@@ -3,7 +3,7 @@ package cloudscraper
 import (
 	"maps"
 
-	"github.com/RomainMichau/CycleTLS/cycletls"
+	"github.com/Danny-Dasilva/CycleTLS/cycletls"
 )
 
 type CloudScrapper struct {
@@ -86,13 +86,13 @@ func (cs CloudScrapper) RespChan() chan cycletls.Response {
 	return cs.respChan
 }
 
-func Init(mobile bool, workers bool) (*CloudScrapper, error) {
+func Init(mobile bool) (*CloudScrapper, error) {
 	browserConf, err := getUserAgents(mobile)
 	if err != nil {
 		return nil, err
 	}
 
-	cycleTstClient := cycletls.Init(workers)
+	cycleTstClient := cycletls.Init()
 
 	p := CloudScrapper{
 		client:        cycleTstClient,

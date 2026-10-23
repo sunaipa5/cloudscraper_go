@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/RomainMichau/CycleTLS/cycletls"
+	"github.com/Danny-Dasilva/CycleTLS/cycletls"
 )
 
 func TestCloudScrapper_Get(t *testing.T) {
@@ -13,7 +13,7 @@ func TestCloudScrapper_Get(t *testing.T) {
 	fmt.Println(">>> RUNNING TEST: Get")
 	fmt.Println("==========================================")
 
-	client, err := Init(false, true)
+	client, err := Init(false)
 	if err != nil {
 		t.Fatalf("Init() error: %v", err)
 	}
@@ -33,7 +33,7 @@ func TestCloudScrapper_Post(t *testing.T) {
 	fmt.Println(">>> RUNNING TEST: Post")
 	fmt.Println("==========================================")
 
-	client, err := Init(false, true)
+	client, err := Init(false)
 	if err != nil {
 		t.Fatalf("Init() error: %v", err)
 	}
@@ -58,7 +58,7 @@ func TestCloudScrapper_Do(t *testing.T) {
 	fmt.Println(">>> RUNNING TEST: Do")
 	fmt.Println("==========================================")
 
-	client, err := Init(false, true)
+	client, err := Init(false)
 	if err != nil {
 		t.Fatalf("Init() error: %v", err)
 	}
@@ -87,7 +87,7 @@ func TestCloudScrapper_Queue(t *testing.T) {
 	fmt.Println(">>> RUNNING TEST: Queue")
 	fmt.Println("==========================================")
 
-	client, err := Init(false, true)
+	client, err := Init(false)
 	if err != nil {
 		t.Fatalf("Init() error: %v", err)
 	}

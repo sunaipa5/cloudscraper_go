@@ -30,8 +30,8 @@ import (
 func main() {
 
 	client, _ := cloudscraper.Init(false, false)
-	res, _ := client.Post("https://www.facebook.com/anything/", make(map[string]string), "")
-	res2, _ := client.Get("https://www.facebook.com/anything/", make(map[string]string), "")
+	res, _ := client.Post("https://httpbin.org/get", make(map[string]string), "")
+	res2, _ := client.Get("https://httpbin.org/post", make(map[string]string), "")
 	print(res.Body)
 	print(res2.Body)
 }
@@ -57,7 +57,7 @@ func main() {
 		Timeout:         10,
 		DisableRedirect: true,
 	}
-	res, _ := client.Do("https://www.facebook.com/anything", options, "PUT")
+	res, _ := client.Do("https://httpbin.org/put", options, "PUT")
 	print(res.Body)
 }
 ```

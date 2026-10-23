@@ -43,7 +43,7 @@ func main() {
 package main
 
 import (
-	"github.com/RomainMichau/CycleTLS/cycletls"
+	"github.com/Danny-Dasilva/CycleTLS/cycletls"
 	"github.com/sunaipa5/cloudscraper_go/cloudscraper"
 )
 
@@ -68,7 +68,7 @@ func main() {
 package main
 
 import (
-	"github.com/RomainMichau/CycleTLS/cycletls"
+	"github.com/Danny-Dasilva/CycleTLS/cycletls"
 	"github.com/sunaipa5/cloudscraper_go/cloudscraper"
 )
 

@@ -1,4 +1,4 @@
-module github.com/sunaipa/cloudscraper_go
+module github.com/sunaipa5/cloudscraper_go
 
 go 1.26.0
 

@@ -24,7 +24,7 @@ Get my JA3: https://kawayiyi.com/tls
 package main
 
 import (
-	"github.com/RomainMichau/cloudscraper_go/cloudscraper"
+	"github.com/sunaipa5/cloudscraper_go/cloudscraper"
 )
 
 func main() {
@@ -43,8 +43,8 @@ func main() {
 package main
 
 import (
-	"github.com/Danny-Dasilva/CycleTLS/cycletls"
-	"github.com/RomainMichau/cloudscraper_go/cloudscraper"
+	"github.com/RomainMichau/CycleTLS/cycletls"
+	"github.com/sunaipa5/cloudscraper_go/cloudscraper"
 )
 
 func main() {
@@ -68,8 +68,8 @@ func main() {
 package main
 
 import (
-	"github.com/Danny-Dasilva/CycleTLS/cycletls"
-	"github.com/RomainMichau/cloudscraper_go/cloudscraper"
+	"github.com/RomainMichau/CycleTLS/cycletls"
+	"github.com/sunaipa5/cloudscraper_go/cloudscraper"
 )
 
 func main() {

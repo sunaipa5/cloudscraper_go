@@ -1,0 +1,9 @@
+version: 2
+updates:
+  # Go (go.mod)
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"

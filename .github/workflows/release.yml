@@ -30,4 +30,12 @@ jobs:
           MAJOR_MINOR=$(echo $BASE_VERSION | cut -d. -f1,2)
           NEXT_TAG="v${MAJOR_MINOR}.${NEW_PATCH}"
 
-          gh release create "$NEXT_TAG" --draft --generate-notes --notes-start-tag "$LATEST_TAG"
+          echo "## What's Changed" > notes.md
+          echo "" >> notes.md
+          git log ${LATEST_TAG}..HEAD --oneline --no-merges | while read -r line; do
+            echo "* $line" >> notes.md
+          done
+          echo "" >> notes.md
+          echo "**Full Changelog**: https://github.com/${{ github.repository }}/compare/${LATEST_TAG}...${NEXT_TAG}" >> notes.md
+
+          gh release create "$NEXT_TAG" --draft --title "$NEXT_TAG" --notes-file notes.md

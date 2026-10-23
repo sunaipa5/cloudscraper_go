@@ -1,5 +1,9 @@
 # CloudScraper Go
 
+> **Fork Notes:**  
+> This repository is a maintained fork focused on security and dependency freshness.  
+> It integrates **Dependabot** to keep all dependencies regularly updated, apply security patches promptly, and ensure ongoing compatibility with the latest `CycleTLS` releases.
+
 Simple go module to bypass CloudFlare securities
 
 For now only passive checks based on TLS footprint (JA3) and user agents are handled  
@@ -11,8 +15,11 @@ JA3 list:
 https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/frontend_scripts/reassembly/ja3/prints/ja3fingerprint.json
 
 Get my JA3: https://kawayiyi.com/tls
+
 # Example of usage
+
 ## Simple Post
+
 ```go
 package main
 
@@ -29,7 +36,9 @@ func main() {
 	print(res2.Body)
 }
 ```
+
 ## Customize request
+
 ```go
 package main
 
@@ -52,7 +61,9 @@ func main() {
 	print(res.Body)
 }
 ```
+
 ## Async Request
+
 ```go
 package main
 
@@ -79,4 +90,5 @@ func main() {
 ```
 
 # Todo
-- Bypass cloudflare active counter-measure (JS challenge) as done on python [cloudscraper](https://github.com/venomous/cloudscraper) 
+
+- Bypass cloudflare active counter-measure (JS challenge) as done on python [cloudscraper](https://github.com/venomous/cloudscraper)

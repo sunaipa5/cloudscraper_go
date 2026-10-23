@@ -1,9 +1,12 @@
 version: 2
 updates:
-  # Go (go.mod)
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
       time: "08:00"
+    # Indirect packages:
+    allow:
+      - dependency-type: "all"
+    open-pull-requests-limit: 10

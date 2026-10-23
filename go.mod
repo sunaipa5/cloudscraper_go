@@ -1,4 +1,4 @@
-module github.com/RomainMichau/cloudscraper_go
+module github.com/sunaipa/cloudscraper_go
 
 go 1.24
 

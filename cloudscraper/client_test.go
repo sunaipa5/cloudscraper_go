@@ -98,7 +98,7 @@ func TestCloudScrapper_Queue(t *testing.T) {
 		DisableRedirect: true,
 	}
 
-	client.Queue("https://httpbin.org/get", options, "GET")
+	client.Queue("https://httpbin.org/put", options, "PUT")
 
 	select {
 	case res := <-client.RespChan():

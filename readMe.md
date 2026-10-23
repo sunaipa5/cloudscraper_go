@@ -49,7 +49,7 @@ import (
 
 func main() {
 
-	client, _ := cloudscraper.Init(false, false)
+	client, _ := cloudscraper.Init(false)
 	options := cycletls.Options{
 		Headers:         map[string]string{"my_custom_header": "header_value"},
 		Body:            "",
@@ -74,14 +74,14 @@ import (
 
 func main() {
 
-	client, _ := cloudscraper.Init(false, true)
+	client, _ := cloudscraper.Init(false)
 	options := cycletls.Options{
 		Headers:         map[string]string{"my_custom_header": "header_value"},
 		Body:            "",
 		Timeout:         10,
 		DisableRedirect: true,
 	}
-	client.Queue("https://www.facebook.com/anything", options, "PUT")
+	client.Queue("https://httpbin.org/put" , options, "PUT")
 	respChannel := client.RespChan()
 	res := <-respChannel
 	print(res.Body)

@@ -17,6 +17,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Fetch All Tags
+        run: git fetch --tags --force
+
       - name: Create Draft Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,4 +30,4 @@ jobs:
           MAJOR_MINOR=$(echo $BASE_VERSION | cut -d. -f1,2)
           NEXT_TAG="v${MAJOR_MINOR}.${NEW_PATCH}"
 
-          gh release create "$NEXT_TAG" --draft --generate-notes
+          gh release create "$NEXT_TAG" --draft --generate-notes --notes-start-tag "$LATEST_TAG"

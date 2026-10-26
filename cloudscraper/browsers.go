@@ -4,7 +4,6 @@ import (
 	_ "embed"
 	"encoding/json"
 	"math/rand"
-	"time"
 )
 
 type browserDescription struct {
@@ -37,7 +36,6 @@ func readJsonFile() (browserDescription, error) {
 }
 
 func getUserAgents(mobile bool) (BrowserConf, error) {
-	rand.Seed(time.Now().UnixNano())
 	var userAgents map[string]map[string][]string
 	browsersDescription, err := readJsonFile()
 	if err != nil {

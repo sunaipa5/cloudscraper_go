@@ -20,7 +20,6 @@ require (
 	github.com/quic-go/quic-go v0.64.1 // indirect
 	github.com/refraction-networking/uquic v0.0.6 // indirect
 	github.com/refraction-networking/utls v1.8.2 // indirect
-	go.uber.org/automaxprocs v1.6.0 // indirect
 	go.uber.org/mock v0.6.0 // indirect
 	golang.org/x/crypto v0.58.0 // indirect
 	golang.org/x/exp v0.0.0-20261014143641-f0251eb4aa3e // indirect
